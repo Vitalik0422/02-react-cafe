@@ -4,10 +4,7 @@ import CafeInfo from './CafeInfo/CafeInfo';
 import VoteOptions from './VoteOptions/VoteOptions';
 import VoteStats from './VoteStats/VoteStats';
 import Notification from './Notification/Notification';
-
-interface Vote {
-  [key: string]: number;
-}
+import type Vote from '../types/votes';
 
 const initialVotes: Vote = {
   good: 0,

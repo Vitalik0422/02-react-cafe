@@ -1,17 +1,11 @@
+import type PropsVoteStats from '../../types/votesStats';
 import styles from './VoteStats.module.css';
-type Vote = {
-  votes: {
-    [key: string]: number;
-  };
-  totalVotes: number;
-  positiveVotes: number;
-};
 
 const VoteStats = ({
   votes: { good, neutral, bad },
   totalVotes,
   positiveVotes,
-}: Vote) => {
+}: PropsVoteStats) => {
   return (
     <div className={styles.container}>
       <p className={styles.stat}>
