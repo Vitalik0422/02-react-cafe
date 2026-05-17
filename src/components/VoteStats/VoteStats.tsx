@@ -1,4 +1,4 @@
-import type PropsVoteStats from '../../types/votesStats';
+import type PropsVoteStats from './types/votesStats';
 import styles from './VoteStats.module.css';
 
 const VoteStats = ({

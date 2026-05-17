@@ -1,5 +1,5 @@
-import type propsButton from '../../../types/button';
 import css from './Button.module.css';
+import type propsButton from './types/button';
 
 const Button = ({ children, variant, ...props }: propsButton) => {
   return (

@@ -1,6 +1,6 @@
-import css from './VoteOptions.module.css';
 import Button from '../UI/button/Button';
-import type PropsVoteOption from '../../types/votesOption';
+import css from './VoteOptions.module.css';
+import type PropsVoteOption from './types/votesOption';
 const VoteOptions = ({ vote, onReset, totalVotes }: PropsVoteOption) => {
   return (
     <div className={css.container}>
