@@ -1,5 +1,11 @@
-import type PropsVoteStats from './types/votesStats';
 import styles from './VoteStats.module.css';
+import type { Votes } from '../../types/votes';
+
+interface PropsVoteStats {
+  votes: Votes;
+  totalVotes: number;
+  positiveVotes: number;
+}
 
 const VoteStats = ({
   votes: { good, neutral, bad },

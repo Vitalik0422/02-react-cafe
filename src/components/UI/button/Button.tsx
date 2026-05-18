@@ -1,5 +1,9 @@
 import css from './Button.module.css';
-import type propsButton from './types/button';
+interface propsButton {
+  children: string;
+  onClick: () => void;
+  variant?: string;
+}
 
 const Button = ({ children, variant, ...props }: propsButton) => {
   return (
