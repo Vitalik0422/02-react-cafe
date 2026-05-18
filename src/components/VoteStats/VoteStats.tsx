@@ -1,17 +1,17 @@
 import styles from './VoteStats.module.css';
 import type { Votes } from '../../types/votes';
 
-interface PropsVoteStats {
+interface VoteStatsProps {
   votes: Votes;
   totalVotes: number;
-  positiveVotes: number;
+  positiveRate: number;
 }
 
 const VoteStats = ({
   votes: { good, neutral, bad },
   totalVotes,
-  positiveVotes,
-}: PropsVoteStats) => {
+  positiveRate,
+}: VoteStatsProps) => {
   return (
     <div className={styles.container}>
       <p className={styles.stat}>
@@ -28,7 +28,7 @@ const VoteStats = ({
       </p>
       <p className={styles.stat}>
         Positive:
-        <strong>{positiveVotes}%</strong>
+        <strong>{positiveRate}%</strong>
       </p>
     </div>
   );

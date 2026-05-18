@@ -4,8 +4,7 @@ import CafeInfo from '../CafeInfo/CafeInfo';
 import VoteOptions from '../VoteOptions/VoteOptions';
 import VoteStats from '../VoteStats/VoteStats';
 import Notification from '../Notification/Notification';
-import type { Votes } from '../../types/votes';
-import type { VoteType } from '../../types/votes';
+import type { VoteType, Votes } from '../../types/votes';
 
 const initialVotes: Votes = {
   good: 0,
@@ -21,10 +20,10 @@ const App = () => {
     : 0;
   const canReset = totalVotes > 0;
   const handleVote = (key: VoteType) => {
-    setVotes({
-      ...votes,
-      [key]: votes[key] + 1,
-    });
+    setVotes((prevVotes) => ({
+      ...prevVotes,
+      [key]: prevVotes[key] + 1,
+    }));
   };
 
   const resetVotes = () => {
@@ -42,7 +41,7 @@ const App = () => {
         <VoteStats
           votes={votes}
           totalVotes={totalVotes}
-          positiveVotes={positiveRate}
+          positiveRate={positiveRate}
         />
       ) : (
         <Notification />
